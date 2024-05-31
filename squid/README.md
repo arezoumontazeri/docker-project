@@ -32,3 +32,12 @@ services:
     volumes:
       - ./squid.conf:/etc/squid/squid.conf
     restart: unless-stopped
+
+######################################################## Notes ############################################################
+
+- **Docker Image**: The Docker image `sameersbn/squid:3.5.27-2` is used in this example. You can replace it with any other Squid image that suits your specific requirements.
+- **Configuration File**: Ensure the `squid.conf` provided is correctly configured for your deployment needs. This file controls how Squid operates and should be customized appropriately.
+- **Ports**: Make sure the port mappings in the `docker-compose.yml` do not conflict with other services on your host.
+
+This README should help users understand how to deploy and manage the Squid proxy in a Docker environment effectively. Adjust the document as necessary to fit your specific setup or additional configurations.
+
