@@ -1,0 +1,1 @@
+This repository contains a Docker Compose setup for running an ELK (Elasticsearch, Logstash, kibana) stack. ITs designed to provide a quick and straightforward methode for deploying a fully functional ELK stack, which is ideal for development environments, learning purposes, and initial production setups.
