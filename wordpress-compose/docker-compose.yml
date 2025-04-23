@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: wordpress-dbb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-pw
+      MYSQL_DATABASE: wordpress
+    volumes:
+      - wp-db-volume:/var/lib/mysql
+
+  wordpress:
+    image: wordpress
+    container_name: my-wordpresss
+    restart: always
+    ports:
+      - "8089:80"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: wordpresss
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: my-secret-pw
+
+volumes:
+  wp-db-volume:
+
